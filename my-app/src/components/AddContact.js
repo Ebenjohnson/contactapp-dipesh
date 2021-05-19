@@ -6,10 +6,18 @@ import React from "react"
 
 class AddContact extends React.Component {
 
-    state = {
-        name : " ",
-        email : " "
-    }
+    // state = {
+    //     name : " ",
+    //     email : " "
+    // }
+    constructor(props) {
+        super(props);
+        this.state = {
+          name: '',
+          email: '',
+         
+        }
+      }
         add = (e) =>{
             e.preventDefault();
             // if (this.state.name ===""&& this.state.email ===""){
@@ -27,16 +35,16 @@ class AddContact extends React.Component {
             <form className = "ui form" >
                 <div className = "field">
                     <label>Name</label>
-                    <input type = "text" name="name" placeholder="Name" 
-                     value={this.state.name}
-                     onChange={(e)=> this.setState({name : e.target.value})}
+                    <input type = "text" name="name" placeholder="name" 
+                     //value={this.state.name}
+                     //onChange={(e)=> this.setState({name : e.target.value})}
                     > </input>
                 </div>
                 <div className = "field">
                     <label>Email</label>
                     <input type = "text" name="email" placeholder="email"
-                    value={this.state.email}
-                    onChange={(e)=> this.setState({email : e.target.value})}
+                    //value={this.state.email}
+                   // onChange={(e)=> this.setState({email : e.target.value})}
                     > </input>
                 </div>
                     <button className = "ui button blue">Add</button>
